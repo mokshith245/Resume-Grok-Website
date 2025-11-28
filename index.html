@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Resume-Pilot - Your Resume Companion</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-        
+
         html {
             scroll-behavior: smooth;
         }
@@ -36,7 +38,8 @@
             align-items: center;
             justify-content: flex-start;
             min-height: 100vh;
-            min-height: 100dvh; /* Dynamic viewport height for mobile */
+            min-height: 100dvh;
+            /* Dynamic viewport height for mobile */
             padding: 3rem 2rem;
             background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, rgba(37, 99, 235, 0.1) 50%, rgba(29, 78, 216, 0.15) 100%);
             text-align: center;
@@ -45,14 +48,23 @@
         }
 
 
-            .logo {
-                width: 80px;
-                height: 80px;
-                margin-right: 20px;
-                border-radius: 12px;
-            }        @keyframes gentleFloat {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-8px) scale(1.02); }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 12px;
+        }
+
+        @keyframes gentleFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-8px) scale(1.02);
+            }
         }
 
         h1 {
@@ -63,12 +75,12 @@
             color: #e0e0e0;
             position: relative;
         }
-        
+
         .typing-text {
             position: relative;
             display: inline-block;
         }
-        
+
         .typing-text::after {
             content: '|';
             position: absolute;
@@ -76,10 +88,18 @@
             animation: blink 1s infinite;
             color: #ffffff;
         }
-        
+
         @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
         }
 
         .download-links {
@@ -115,7 +135,7 @@
             -moz-user-select: none;
             -ms-user-select: none;
         }
-        
+
         .link::before {
             content: '';
             position: absolute;
@@ -126,21 +146,23 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transition: left 0.6s ease;
         }
-        
+
         .link:hover::before {
             left: 100%;
         }
-        
+
         @keyframes linkPulse {
-            0% { 
+            0% {
                 box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2), 0 0 0 0 rgba(59, 130, 246, 0.4);
                 transform: scale(1);
             }
-            50% { 
+
+            50% {
                 box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2), 0 0 0 8px rgba(59, 130, 246, 0);
                 transform: scale(1.02);
             }
-            100% { 
+
+            100% {
                 box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2), 0 0 0 0 rgba(59, 130, 246, 0);
                 transform: scale(1);
             }
@@ -232,11 +254,22 @@
             transform: translateY(30px);
             box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
         }
-        
-        .feature-card:nth-child(1) { animation-delay: 0.1s; }
-        .feature-card:nth-child(2) { animation-delay: 0.3s; }
-        .feature-card:nth-child(3) { animation-delay: 0.5s; }
-        .feature-card:nth-child(4) { animation-delay: 0.7s; }
+
+        .feature-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .feature-card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .feature-card:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .feature-card:nth-child(4) {
+            animation-delay: 0.7s;
+        }
 
         .feature-card::before {
             content: '';
@@ -248,10 +281,21 @@
             background: linear-gradient(90deg, transparent, rgba(128, 128, 128, 0.5), transparent);
         }
 
-        .feature-card:nth-child(1) { animation-delay: 0.1s; }
-        .feature-card:nth-child(2) { animation-delay: 0.2s; }
-        .feature-card:nth-child(3) { animation-delay: 0.3s; }
-        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        .feature-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .feature-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .feature-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .feature-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
         @keyframes fadeInUp {
             to {
@@ -267,33 +311,42 @@
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.2));
         }
 
-            .feature-icon {
-                margin-bottom: 16px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #93c5fd;
-                transition: all 0.3s ease;
+        .feature-icon {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #93c5fd;
+            transition: all 0.3s ease;
+        }
+
+        .feature-icon svg {
+            width: 48px;
+            height: 48px;
+            stroke: currentColor;
+            transition: all 0.3s ease;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        .feature-card:hover .feature-icon svg {
+            transform: scale(1.2) rotate(10deg);
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.6));
+            color: #60a5fa;
+        }
+
+        @keyframes iconFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px);
             }
-            
-            .feature-icon svg {
-                width: 48px;
-                height: 48px;
-                stroke: currentColor;
-                transition: all 0.3s ease;
-                animation: iconFloat 3s ease-in-out infinite;
+
+            50% {
+                transform: translateY(-5px);
             }
-            
-            .feature-card:hover .feature-icon svg {
-                transform: scale(1.2) rotate(10deg);
-                filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.6));
-                color: #60a5fa;
-            }
-            
-            @keyframes iconFloat {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-5px); }
-            }        .feature-title {
+        }
+
+        .feature-title {
             font-size: 1.4rem;
             color: #d0d0d0;
             margin-bottom: 0.8rem;
@@ -330,18 +383,18 @@
                 flex-direction: column;
                 gap: 0.5rem;
             }
-            
+
             .container {
                 padding: 1rem 0.5rem;
                 min-height: 100vh;
                 min-height: 100dvh;
             }
-            
+
             h1 {
                 font-size: 2.2rem;
                 margin-top: 1rem;
             }
-            
+
             .link {
                 font-size: 0.9rem;
                 padding: 0.75rem 1rem;
@@ -349,201 +402,228 @@
                 max-width: 140px;
                 margin: 0.25rem 0;
             }
-            
+
             /* iOS specific fixes */
             @supports (-webkit-touch-callout: none) {
                 .container {
                     padding-bottom: env(safe-area-inset-bottom, 1rem);
                 }
             }
-            
+
             .download-links {
                 gap: 0.5rem;
             }
-            
+
             .footer {
                 position: relative;
                 margin-top: 2rem;
             }
-            
+
             .footer-text {
                 font-size: 0.7rem;
                 padding: 0 1rem;
                 text-align: center;
             }
-            
+
             .footer {
                 padding: 0.3rem 0;
                 margin-top: 1rem;
             }
-            
+
             .footer-links {
                 gap: 1rem;
             }
-            
+
             .footer-link {
                 font-size: 0.7rem;
             }
-            
+
             .features-section {
                 margin: 1rem 0 0.5rem 0;
             }
-            
+
             .features-title {
                 font-size: 1.4rem;
                 margin-bottom: 1rem;
             }
-            
+
             .features-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
                 padding: 0 0.5rem;
             }
-            
+
             .feature-card {
                 padding: 1.5rem 1rem;
             }
-            
+
             .feature-icon {
                 font-size: 2.5rem;
             }
-            
+
             .feature-title {
                 font-size: 1.1rem;
             }
-            
+
             .feature-description {
                 font-size: 0.9rem;
             }
         }
-        
+
         @media (max-width: 480px) {
             .container {
                 padding: 0.5rem;
             }
-            
+
             h1 {
                 font-size: 1.8rem;
                 margin-bottom: 1rem;
                 margin-top: 1rem;
             }
-            
+
             .logo {
                 width: 60px;
                 height: 60px;
             }
-            
+
             .link {
                 font-size: 0.8rem;
                 padding: 0.6rem 0.8rem;
                 min-width: 100px;
                 max-width: 110px;
             }
-            
+
             .download-links {
                 gap: 0.3rem;
                 flex-direction: column;
             }
-            
+
             .footer-links {
                 gap: 0.3rem;
             }
-            
+
             .footer-link {
                 font-size: 0.8rem;
                 padding: 0.3rem;
             }
-            
+
             .footer-text {
                 font-size: 0.6rem;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <img src="logo1.png" alt="Resume-Pilot Logo" class="logo">
-                        <h1 class="main-title">
-                    <span class="typing-text" data-text="Resume-Pilot">Resume-Pilot</span>
-                </h1>
-        
+        <h1 class="main-title">
+            <span class="typing-text" data-text="Resume-Pilot">Resume-Pilot</span>
+        </h1>
+
         <div class="download-links">
-            <a href="#" class="link" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.9a9.5 9.5 0 0 1-6.2-2.7c-1.5-1.5-2.3-3.5-2.3-5.6 0-4.9 3.9-8.9 8.5-8.9 2.2 0 4.3.9 5.8 2.4"/><path d="M18 6.8a9.5 9.5 0 0 0-5.8-2.1c-2.9 0-5.5 1.3-7.2 3.3"/><path d="M14.6 10.5c.1-.2.2-.4.2-.6 0-.8-.6-1.4-1.4-1.4s-1.4.6-1.4 1.4c0 .2.1.4.2.6"/><path d="M15.2 15.7c-.6 1-1.6 1.6-2.8 1.6-1.2 0-2.2-.6-2.8-1.6"/></svg>
+            <a href="https://apps.apple.com/us/app/resume-pilot/id6752590681" class="link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M12 20.9a9.5 9.5 0 0 1-6.2-2.7c-1.5-1.5-2.3-3.5-2.3-5.6 0-4.9 3.9-8.9 8.5-8.9 2.2 0 4.3.9 5.8 2.4" />
+                    <path d="M18 6.8a9.5 9.5 0 0 0-5.8-2.1c-2.9 0-5.5 1.3-7.2 3.3" />
+                    <path d="M14.6 10.5c.1-.2.2-.4.2-.6 0-.8-.6-1.4-1.4-1.4s-1.4.6-1.4 1.4c0 .2.1.4.2.6" />
+                    <path d="M15.2 15.7c-.6 1-1.6 1.6-2.8 1.6-1.2 0-2.2-.6-2.8-1.6" />
+                </svg>
                 iOS
             </a>
-            <a href="#" class="link" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <a href="https://play.google.com/store/apps/details?id=com.buzz.resumepilot" class="link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                    <line x1="12" y1="18" x2="12.01" y2="18" />
+                </svg>
                 Android
             </a>
-            <a href="#" class="link" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <a href="http://ec2-34-207-119-249.compute-1.amazonaws.com:3001/login" class="link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
                 Browser
             </a>
         </div>
-        
+
         <div class="features-section">
             <h2 class="features-title">Features</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
                         </svg>
                     </div>
                     <div class="feature-time">5 Seconds</div>
                     <h3 class="feature-title">Resume based on Job Description</h3>
                     <p class="feature-description">
-                        Simply provide a <span class="feature-highlight">job description and your previous resume</span> - 
+                        Simply provide a <span class="feature-highlight">job description and your previous resume</span>
+                        -
                         our AI will update and tailor your resume in just 5 seconds to match perfectly!
                     </p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                         </svg>
                     </div>
                     <div class="feature-time">10 Seconds</div>
                     <h3 class="feature-title">Create a New Resume</h3>
                     <p class="feature-description">
-                        Create a <span class="feature-highlight">professional resume in under 10 seconds</span> with just a speaking prompt. 
+                        Create a <span class="feature-highlight">professional resume in under 10 seconds</span> with
+                        just a speaking prompt.
                         No typing, no hassle - just speak and watch your resume come to life instantly!
                     </p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14,2 14,8 20,8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10,9 9,9 8,9"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14,2 14,8 20,8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10,9 9,9 8,9" />
                         </svg>
                     </div>
                     <div class="feature-time">Premium Quality</div>
                     <h3 class="feature-title">Elite Professional Templates</h3>
                     <p class="feature-description">
-                        Access <span class="feature-highlight">high-quality PDF templates</span> used by top software engineers 
+                        Access <span class="feature-highlight">high-quality PDF templates</span> used by top software
+                        engineers
                         at Google, Amazon, and other leading tech companies. Stand out from the crowd!
                     </p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M8 12h8"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M8 12h8" />
                         </svg>
                     </div>
                     <div class="feature-time">Any Language</div>
                     <h3 class="feature-title">Multilingual Voice Support</h3>
                     <p class="feature-description">
-                        <span class="feature-highlight">Speak in any language</span> to tailor your resume after content extraction. 
+                        <span class="feature-highlight">Speak in any language</span> to tailor your resume after content
+                        extraction.
                         Break language barriers and create resumes that resonate globally!
                     </p>
                 </div>
@@ -557,8 +637,10 @@
             <a href="terms.html" class="footer-link">Terms of Service</a>
             <a href="about.html" class="footer-link">About</a>
         </div>
-        <p class="footer-text">&copy; 2025 Flash Apps. All rights reserved. | Made with ❤️ for professionals worldwide</p>
+        <p class="footer-text">&copy; 2025 Flash Apps. All rights reserved. | Made with ❤️ for professionals worldwide
+        </p>
     </footer>
 
 </body>
+
 </html>
